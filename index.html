@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="gbk" />
+
+	<title>域名出售</title>
+
+
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+
+	<script language="javascript" src="js/jquery-1.11.3.min.js"></script>
+
+	<!--循环滚动插件-->
+
+	<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.x.js"></script>
+
+	<style type="text/css">
+
+		body {
+
+			min-width: 1200px;
+
+			min-height: 926px;
+
+		}
+
+		.wide1200 {
+
+			margin: 0 auto;
+
+			min-width: 1200px;
+
+			max-width: 1200px;
+
+			_overflow: hidden;
+
+			zoom: 1;
+
+		}
+
+		/*背景图*/
+
+		.template-bg{
+
+			position: absolute;
+
+			top: 0;
+
+			left: 0;
+
+			z-index: -1;
+
+			width: 100%;
+
+			min-width: 1200px;
+
+		}
+
+		/*交易信息和域名信息，无参数时css*/
+
+		.nodeal .content-top .jiaoyi, .nodeal .domain{
+
+			display: none;
+
+		}
+
+		.nodeal .content-top .card{
+
+			width: auto;
+
+		}
+
+		.nodeal .content-top{
+
+			text-align: center;
+
+
+
+		}
+
+
+
+		/*头部内容*/
+
+		#header {
+
+			padding-top: 30px;
+
+			text-align: center;
+
+		}
+
+		.header-title {
+
+			font-size: 50px;
+
+			font-weight: bold;
+
+			color: #555;
+
+		}
+
+
+
+		.header-title span {
+
+			font-family: arial;
+
+		}
+
+
+
+		.about {
+
+			padding-top: 20px;
+
+			font-size: 20px;
+
+			color: #555;
+
+		}
+
+
+
+		.sale {
+
+			padding-top: 10px;
+
+			font-size: 16px;
+
+			color: #555;
+
+		}
+
+
+
+		.whois-btn {
+
+			margin-top: 22px;
+
+			display: inline-block;
+
+			*display: inline;
+
+			*zoom: 1;
+
+			width: 120px;
+
+			height: 30px;
+
+			line-height: 30px;
+
+			background: #666;
+
+			border-radius: 16px;
+
+			font-size: 20px;
+
+			color: #fff;
+
+			cursor: pointer;
+
+		}
+
+		/*中间内容*/
+
+		.content-top {
+
+			padding: 84px 210px 0 226px;
+
+		}
+
+
+
+		/*交易信息*/
+
+		.content-top .jiaoyi{
+
+			padding-left: 30px;
+
+			float: left;
+
+			width: 376px;
+
+		}
+
+		.content-top .jiaoyi .jiaoyi-title {
+
+			padding: 6px 12px;
+
+			width: 98px;
+
+			border-bottom: 2px solid #666;
+
+			border-left: 2px solid #666;
+
+			font-size: 24px;
+
+			font-weight: bold;
+
+			color: #666;
+
+		}
+
+
+
+		.content-top .jiaoyi .jiaoyi-txt{
+
+			padding-top: 14px;
+
+			padding-left: 14px;
+
+			font-size: 18px;
+
+			color: #666;
+
+			text-align: left;
+
+		}
+
+
+
+		.content-top .jiaoyi .jiaoyi-txt p{
+
+			padding-top: 20px;
+
+			color: #333;
+
+		}
+
+		.content-top .jiaoyi .jiaoyi-txt span{
+
+			color: #ff0000;
+
+		}
+
+		.jiaoyi .jiaoyi-txt .jiaoyi-btn{
+
+			display: inline-block;
+
+			*display: inline;
+
+			*zoom: 1;
+
+			margin-top: 24px;
+
+			font-size: 16px;
+
+			color: #ff0000;
+
+			text-decoration: underline;
+
+		}
+
+		.jiaoyi .jiaoyi-txt .jiaoyi-btn:hover{
+
+			color: #0078ca;
+
+		}
+
+		/*掌柜名片*/
+
+		.content-top .card {
+
+			display: inline-block;
+
+			*display: inline;
+
+			*zoom: 1;
+
+			text-align: left;
+
+		}
+
+
+
+		.content-top .card .card-title {
+
+			padding: 6px 12px;
+
+			width: 98px;
+
+			border-bottom: 2px solid #666;
+
+			border-left: 2px solid #666;
+
+			font-size: 24px;
+
+			font-weight: bold;
+
+			color: #666;
+
+			display: inline-block;
+
+			*display: inline;
+
+			*zoom: 1;
+
+		}
+
+
+
+		.content-top .card .card-txt {
+
+			padding-left: 14px;
+
+			margin-top: 36px;
+
+			color: #666;
+
+			text-align: left;
+
+			width:300px;
+
+			line-height:25px;
+
+		}
+
+		.content-top .card .card-txt .card-qq{
+
+			margin-left: 10px;
+
+			display: inline-block;
+
+			*display: inline;
+
+			*zoom: 1;
+
+			width: 81px;
+
+			height: 23px;
+
+			background: url(images/card-qq.png) no-repeat;
+
+			vertical-align: middle;
+
+		}
+
+		.content-top .card .card-txt h3 {
+
+			font-size: 24px;
+
+		}
+
+
+
+		.content-top .card .card-txt p {
+
+			padding-top: 12px;
+
+			font-size: 16px;
+
+			overflow: hidden;
+
+		}
+
+		/*域名信息*/
+
+		.domain{
+
+			padding: 156px 210px 0 226px;
+
+		}
+
+		.domain .domain-left{
+
+			margin-top: 34px;
+
+			margin-right: 20px;
+
+			float: left;
+
+			width: 20px;
+
+			height: 36px;
+
+			background: url(images/left-icon.png) no-repeat;
+
+			cursor: pointer;
+
+		}
+
+		.domain .domain-right{
+
+			margin-top: 34px;
+
+			margin-left: 20px;
+
+			float: right;
+
+			width: 20px;
+
+			height: 36px;
+
+			background: url(images/right-icon.png) no-repeat;
+
+			cursor: pointer;
+
+		}
+
+		.domain .domain-list{
+
+			margin: 0 20px;
+
+		}
+
+		.domain .domain-list li{
+
+			float: left;
+
+			padding-right: 16px;
+
+		}
+
+		.domain .domain-list .column{
+
+			width: 186px;
+
+			padding: 10px 10px 10px 18px;
+
+			border: 1px dashed #ccc;
+
+		}
+
+		.domain .domain-list .column h5 a{
+
+			font-size: 16px;
+
+			font-weight: bold;
+
+			color: #ff0000;
+
+		}
+
+		.domain .domain-list .column p{
+
+			padding-top: 10px;
+
+			font-size: 14px;
+
+			color: #333;
+
+			overflow: hidden;
+
+			text-overflow: ellipsis;
+
+			white-space: nowrap;
+
+		}
+
+		.domain .domain-list .column span{
+
+			color: #ff0000;
+
+		}
+
+		/*循环滚动信息*/
+
+		.template-msg-container{
+
+			margin-top: 42px;
+
+			text-align: left;
+
+			margin-left: 12%;
+
+		}
+
+		.template-msg {
+
+			display: inline-block;
+
+			vertical-align: middle;
+
+			width: 560px;
+
+		}
+
+		.template-msg .template-msg-icon{
+
+			float: left;
+
+			display: inline-block;
+
+			width: 40px;
+
+			height: 40px;
+
+			background: url(images/icon.png) no-repeat 0 -374px;
+
+		}
+
+		.template-msg li {
+
+			height: 40px;
+
+			line-height: 40px;
+
+			float: none;
+
+			width: 100%;
+
+			overflow: hidden;
+
+			text-align: left;
+
+		}
+
+
+
+		.template-msg li a {
+
+			display: block;
+
+			overflow: hidden;
+
+			text-overflow: ellipsis;
+
+			white-space: nowrap;
+
+			word-break: normal;
+
+			font-size: 16px;
+
+			color: #ff6738;
+
+		}
+
+		/*更多活动了解*/
+
+		.template-msg-container .more-activity {
+
+			display: inline-block;
+
+			height: 40px;
+
+			line-height: 40px;
+
+			font-size: 16px;
+
+			margin-left: 10px;
+
+			color: #27354d;
+
+			vertical-align: middle;
+
+		}
+
+	</style>
+
+</head>
+
+
+
+<body>
+
+<div class="wide1200">
+
+	<!--头部，开始-->
+
+	<div id="header">
+
+		<div class="header-title"><span>主页：www.sspu.club</span></div>
+
+
+		<div class="header-title"><span><br>域名免费申请使用！<br>网站域名整体转让！</span></div>
+		
+		
+
+		<!--循环滚动信息-->
+
+		<div class="template-msg-container">
+
+			<!-- 循环提示信息 -->
+
+			<div class="template-msg pngFix cl">
+
+				<i class="template-msg-icon" title="域名动态"></i>
+
+				<div class="bd ">
+
+					<ul class="west_news_list">
+
+
+
+					</ul>
+
+				</div>
+
+			</div>
+
+
+		</div>
+
+		 
+
+		<script>
+
+			$(function() {
+
+				for (var i=0;i<newjson.length ;i++ )
+
+				{
+
+					$(".west_news_list").append('<li><a href="'+newjson[i].url+'" target="_blank">'+newjson[i].title+'</a></li>')
+
+				}
+
+				// 当前导航中所有滚动消息 都滚动上
+
+				$(".template-msg").slide({
+
+					mainCell: ".bd ul",
+
+					autoPage: true,
+
+					effect: "topLoop",
+
+					autoPlay: true,
+
+					easing: "easeOutCirc"
+
+				});
+
+			})
+
+		</script>
+
+	</div>
+
+	<!--头部，结束-->
+
+	<!--中间内容，开始-->
+
+	<div id="content" class="display:none">
+
+		<div class="content-top">
+
+			<!--交易信息，开始-->
+
+			<div class="jiaoyi">
+
+				<div class="jiaoyi-title">交易信息</div>
+
+				<div class="jiaoyi-txt">
+
+
+					<p>整站价格：<span>商议</span></p>
+					
+					
+					
+					<p>说明：可<span>免费</span>使用子域名（邮箱联系）<br>例如:<br>basketball.sspu.club（篮球社），Esport.sspu.club（电竞社）<br>等</p>
+					
+
+				</div>
+
+			</div>
+
+			<!--交易信息，结束-->
+
+			<!--名片，开始-->
+
+			<div class="card">
+
+				<div class="card-title">联系方式</div>
+
+				<div class="card-txt">
+
+					<h3>联系人：药水(昵称) </h3>
+
+					<h3>邮箱：<span>169618827@qq.com</span> </h3>
+					
+					<h6><br><br>（没人的话就接着续费，留个念想，谁还不是两工大的）</h6>
+
+				</div>
+
+			</div>
+			
+
+			<!--名片，结束-->
+
+		</div>
+
+		
+		<!--域名信息，开始-->
+
+		<div class="domain" style="display: none;">
+
+			<div class="domain-left"></div>
+
+			<div class="domain-right"></div>
+
+			<ul class="domain-list cl">
+
+				<li>
+
+					<div class="column">
+
+						
+
+					</div>
+
+				</li>
+
+				<li>
+
+					<div class="column">
+
+
+						<p>当前价格：<span>XXXX元</span></p>
+
+						<p>结束时间：<span>XX时XX分</span></p>
+
+					</div>
+
+				</li>
+
+				<li style="padding-right: 0;">
+
+					<div class="column">
+
+						<p>当前价格：<span>XXXX元</span></p>
+
+						<p>结束时间：<span>XX时XX分</span></p>
+
+					</div>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+		<!--域名信息，结束-->
+
+		<!--广告信息，开始--><div  align="center"></div><!--广告信息，结束--><!--统计信息，开始--><div  align="center"  style="padding:25px;"></div><!--统计信息，结束-->
+
+	</div>
+
+	<!--中间内容，结束-->
+
+</div>
+
+<div class="template-bg">
+	
+
+	<div style="height: 302px;background: url('images/bg-img1.jpg') no-repeat top center;"></div>
+
+	<div style="height: 302px;background: url('images/bg-img2.jpg') no-repeat top center;"></div>
+
+	<div style="height: 322px;background: url('images/bg-img3.jpg') no-repeat top center;"></div>
+
+</div>
+
+</body>
+
+</html>
